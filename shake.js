@@ -2,6 +2,11 @@
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
+lib.webFontTxtInst = {}; 
+var loadedTypekitCount = 0;
+var loadedGoogleCount = 0;
+var gFontsUpdateCacheList = [];
+var tFontsUpdateCacheList = [];
 lib.ssMetadata = [
 		{name:"shake_atlas_1", frames: [[0,0,1364,1364]]},
 		{name:"shake_atlas_2", frames: [[0,0,1364,1364]]},
@@ -20,6 +25,62 @@ lib.ssMetadata = [
 ];
 
 
+
+lib.updateListCache = function (cacheList) {		
+	for(var i = 0; i < cacheList.length; i++) {		
+		if(cacheList[i].cacheCanvas)		
+			cacheList[i].updateCache();		
+	}		
+};		
+
+lib.addElementsToCache = function (textInst, cacheList) {		
+	var cur = textInst;		
+	while(cur != null && cur != exportRoot) {		
+		if(cacheList.indexOf(cur) != -1)		
+			break;		
+		cur = cur.parent;		
+	}		
+	if(cur != exportRoot) {		
+		var cur2 = textInst;		
+		var index = cacheList.indexOf(cur);		
+		while(cur2 != null && cur2 != cur) {		
+			cacheList.splice(index, 0, cur2);		
+			cur2 = cur2.parent;		
+			index++;		
+		}		
+	}		
+	else {		
+		cur = textInst;		
+		while(cur != null && cur != exportRoot) {		
+			cacheList.push(cur);		
+			cur = cur.parent;		
+		}		
+	}		
+};		
+
+lib.gfontAvailable = function(family, totalGoogleCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
+
+	loadedGoogleCount++;		
+	if(loadedGoogleCount == totalGoogleCount) {		
+		lib.updateListCache(gFontsUpdateCacheList);		
+	}		
+};		
+
+lib.tfontAvailable = function(family, totalTypekitCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
+
+	loadedTypekitCount++;		
+	if(loadedTypekitCount == totalTypekitCount) {		
+		lib.updateListCache(tFontsUpdateCacheList);		
+	}		
+};
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
 	this.gotoAndPlay = function(positionOrLabel){
@@ -1376,12 +1437,16 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(17).call(this.frame_17).wait(1));
 
 	// text
-	this.text = new cjs.Text("תפוח", "bold 180px 'Amatic SC'");
+	this.text = new cjs.Text("תפוח", "normal 700 180px 'Amatic SC'");
 	this.text.textAlign = "center";
 	this.text.lineHeight = 255;
 	this.text.lineWidth = 436;
 	this.text.parent = this;
 	this.text.setTransform(200,324.7);
+	if(!lib.properties.webfonts['Amatic SC']) {
+		lib.webFontTxtInst['Amatic SC'] = lib.webFontTxtInst['Amatic SC'] || [];
+		lib.webFontTxtInst['Amatic SC'].push(this.text);
+	}
 	this.text._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.text).wait(2).to({_off:false},0).wait(16));
@@ -1696,21 +1761,22 @@ lib.properties = {
 	fps: 24,
 	color: "#FFFFFF",
 	opacity: 1.00,
+	webfonts: {},
 	manifest: [
-		{src:"images/shake_atlas_1.png?1602168182789", id:"shake_atlas_1"},
-		{src:"images/shake_atlas_2.png?1602168182789", id:"shake_atlas_2"},
-		{src:"images/shake_atlas_3.png?1602168182789", id:"shake_atlas_3"},
-		{src:"images/shake_atlas_4.png?1602168182789", id:"shake_atlas_4"},
-		{src:"images/shake_atlas_5.png?1602168182790", id:"shake_atlas_5"},
-		{src:"images/shake_atlas_6.png?1602168182790", id:"shake_atlas_6"},
-		{src:"images/shake_atlas_7.png?1602168182790", id:"shake_atlas_7"},
-		{src:"images/shake_atlas_8.png?1602168182790", id:"shake_atlas_8"},
-		{src:"images/shake_atlas_9.png?1602168182790", id:"shake_atlas_9"},
-		{src:"images/shake_atlas_10.png?1602168182790", id:"shake_atlas_10"},
-		{src:"images/shake_atlas_11.png?1602168182790", id:"shake_atlas_11"},
-		{src:"images/shake_atlas_12.png?1602168182791", id:"shake_atlas_12"},
-		{src:"images/shake_atlas_13.png?1602168182792", id:"shake_atlas_13"},
-		{src:"images/shake_atlas_14.png?1602168182792", id:"shake_atlas_14"}
+		{src:"images/shake_atlas_1.png?1602168930765", id:"shake_atlas_1"},
+		{src:"images/shake_atlas_2.png?1602168930768", id:"shake_atlas_2"},
+		{src:"images/shake_atlas_3.png?1602168930768", id:"shake_atlas_3"},
+		{src:"images/shake_atlas_4.png?1602168930768", id:"shake_atlas_4"},
+		{src:"images/shake_atlas_5.png?1602168930768", id:"shake_atlas_5"},
+		{src:"images/shake_atlas_6.png?1602168930768", id:"shake_atlas_6"},
+		{src:"images/shake_atlas_7.png?1602168930768", id:"shake_atlas_7"},
+		{src:"images/shake_atlas_8.png?1602168930768", id:"shake_atlas_8"},
+		{src:"images/shake_atlas_9.png?1602168930768", id:"shake_atlas_9"},
+		{src:"images/shake_atlas_10.png?1602168930768", id:"shake_atlas_10"},
+		{src:"images/shake_atlas_11.png?1602168930768", id:"shake_atlas_11"},
+		{src:"images/shake_atlas_12.png?1602168930768", id:"shake_atlas_12"},
+		{src:"images/shake_atlas_13.png?1602168930769", id:"shake_atlas_13"},
+		{src:"images/shake_atlas_14.png?1602168930769", id:"shake_atlas_14"}
 	],
 	preloads: []
 };
