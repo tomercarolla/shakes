@@ -1962,8 +1962,8 @@ if (reversed == null) { reversed = false; }
 		
 		function addListenerToAll() {
 			//פליי לכולם
-			self.apple.addEventListener("mouseover", appleIn);
-			self.blackberry.addEventListener("mouseover", blackberryIn);
+			self.apple.addEventListener("rollover", appleIn);
+			self.blackberry.addEventListener("rollover", blackberryIn);
 			self.banana.addEventListener("rollover", bananaIn);
 			self.blueberry.addEventListener("rollover", blueberryIn);
 			self.chia.addEventListener("rollover", chiaIn);
@@ -1974,7 +1974,7 @@ if (reversed == null) { reversed = false; }
 			self.mint.addEventListener("rollover", mintIn);
 			self.pineapple.addEventListener("rollover", pineappleIn);
 			self.raspberry.addEventListener("rollover", raspberryIn);
-			self.shake1.addEventListener("mouseover", shake1In);
+			self.shake1.addEventListener("rollover", shake1In);
 			self.shake2.addEventListener("rollover", shake2In);
 			self.shake3.addEventListener("rollover", shake3In);
 			self.shake4.addEventListener("rollover", shake4In);
@@ -1986,8 +1986,8 @@ if (reversed == null) { reversed = false; }
 			self.minus200calBtn.addEventListener("rollover", minus200calBtn_over);
 		
 			//יוצא לכולם
-			self.apple.addEventListener("mouseout", fruitOut);
-			self.blackberry.addEventListener("mouseout", fruitOut);
+			self.apple.addEventListener("rollout", fruitOut);
+			self.blackberry.addEventListener("rollout", fruitOut);
 			self.banana.addEventListener("rollout", fruitOut);
 			self.blueberry.addEventListener("rollout", fruitOut);
 			self.chia.addEventListener("rollout", fruitOut);
@@ -1998,7 +1998,7 @@ if (reversed == null) { reversed = false; }
 			self.mint.addEventListener("rollout", fruitOut);
 			self.pineapple.addEventListener("rollout", fruitOut);
 			self.raspberry.addEventListener("rollout", fruitOut);
-			self.shake1.addEventListener("mouseout", shake1Out);
+			self.shake1.addEventListener("rollout", shake1Out);
 			self.shake2.addEventListener("rollout", shake2Out);
 			self.shake3.addEventListener("rollout", shake3Out);
 			self.shake4.addEventListener("rollout", shake4Out);
@@ -2017,9 +2017,50 @@ if (reversed == null) { reversed = false; }
 			self.hamutzBtn.addEventListener("click", hamutzFilterToggle);
 			self.plus200calBtn.addEventListener("click", plus200calFilterToggle);
 			self.minus200calBtn.addEventListener("click", minus200calFilterToggle);
+		}
 		
+		function disabledMouse() {
+			self.apple.mouseEnabled = false;
+			self.blackberry.mouseEnabled = false;
+			self.banana.mouseEnabled = false;
+			self.blueberry.mouseEnabled = false;
+			self.chia.mouseEnabled = false;
+			self.cucumber.mouseEnabled = false;
+			self.kiwi.mouseEnabled = false;
+			self.mango.mouseEnabled = false;
+			self.melon.mouseEnabled = false;
+			self.mint.mouseEnabled = false;
+			self.pineapple.mouseEnabled = false;
+			self.raspberry.mouseEnabled = false;
 		
+			self.shake1.mouseEnabled = false;
+			self.shake2.mouseEnabled = false;
+			self.shake3.mouseEnabled = false;
+			self.shake4.mouseEnabled = false;
+			self.shake5.mouseEnabled = false;
+			self.shake6.mouseEnabled = false;
+		}
 		
+		function enableMouse() {
+			self.apple.mouseEnabled = true;
+			self.blackberry.mouseEnabled = true;
+			self.banana.mouseEnabled = true;
+			self.blueberry.mouseEnabled = true;
+			self.chia.mouseEnabled = true;
+			self.cucumber.mouseEnabled = true;
+			self.kiwi.mouseEnabled = true;
+			self.mango.mouseEnabled = true;
+			self.melon.mouseEnabled = true;
+			self.mint.mouseEnabled = true;
+			self.pineapple.mouseEnabled = true;
+			self.raspberry.mouseEnabled = true;
+		
+			self.shake1.mouseEnabled = true;
+			self.shake2.mouseEnabled = true;
+			self.shake3.mouseEnabled = true;
+			self.shake4.mouseEnabled = true;
+			self.shake5.mouseEnabled = true;
+			self.shake6.mouseEnabled = true;
 		}
 		
 		//פונקציה שמאפירה את כולם
@@ -2036,19 +2077,6 @@ if (reversed == null) { reversed = false; }
 			self.mint.gotoAndStop(1);
 			self.pineapple.gotoAndStop(1);
 			self.raspberry.gotoAndStop(1);
-		
-			self.apple.mouseEnabled = false;
-			self.blackberry.mouseEnabled = false;
-			self.banana.mouseEnabled = false;
-			self.blueberry.mouseEnabled = false;
-			self.chia.mouseEnabled = false;
-			self.cucumber.mouseEnabled = false;
-			self.kiwi.mouseEnabled = false;
-			self.mango.mouseEnabled = false;
-			self.melon.mouseEnabled = false;
-			self.mint.mouseEnabled = false;
-			self.pineapple.mouseEnabled = false;
-			self.raspberry.mouseEnabled = false;
 		}
 		
 		//פונקציה שמציגה את כולם בצבעוני
@@ -2065,19 +2093,6 @@ if (reversed == null) { reversed = false; }
 			self.mint.gotoAndStop(0);
 			self.pineapple.gotoAndStop(0);
 			self.raspberry.gotoAndStop(0);
-		
-			self.apple.mouseEnabled = true;
-			self.blackberry.mouseEnabled = true;
-			self.banana.mouseEnabled = true;
-			self.blueberry.mouseEnabled = true;
-			self.chia.mouseEnabled = true;
-			self.cucumber.mouseEnabled = true;
-			self.kiwi.mouseEnabled = true;
-			self.mango.mouseEnabled = true;
-			self.melon.mouseEnabled = true;
-			self.mint.mouseEnabled = true;
-			self.pineapple.mouseEnabled = true;
-			self.raspberry.mouseEnabled = true;
 		}
 		
 		//פונקציה שמאפירה את כל השייקים
@@ -2088,13 +2103,6 @@ if (reversed == null) { reversed = false; }
 			self.shake4.gotoAndStop(2);
 			self.shake5.gotoAndStop(2);
 			self.shake6.gotoAndStop(2);
-		
-			self.shake1.mouseEnabled = false;
-			self.shake2.mouseEnabled = false;
-			self.shake3.mouseEnabled = false;
-			self.shake4.mouseEnabled = false;
-			self.shake5.mouseEnabled = false;
-			self.shake6.mouseEnabled = false;
 		}
 		
 		//פונקציה שמדליקה את כל השייקים
@@ -2105,25 +2113,19 @@ if (reversed == null) { reversed = false; }
 			self.shake4.gotoAndStop(0);
 			self.shake5.gotoAndStop(0);
 			self.shake6.gotoAndStop(0);
-		
-			self.shake1.mouseEnabled = true;
-			self.shake2.mouseEnabled = true;
-			self.shake3.mouseEnabled = true;
-			self.shake4.mouseEnabled = true;
-			self.shake5.mouseEnabled = true;
-			self.shake6.mouseEnabled = true;
 		}
 		
 		//פונקציה ליציאת עכבר מכל הפירות
 		function fruitOut() {
-			console.log('here1');
-		
 			if (matok == true) {
 				matokOn();
 			} else if (hamutz == true) {
 				hamutzOn();
+			} else if (plus200cal == true) {
+				plus200calOn();
+			} else if (minus200cal == true) {
+				minus200calOn();
 			} else {
-				console.log('here2');
 				enableShake();
 				enableFruits();
 			}
@@ -2136,6 +2138,11 @@ if (reversed == null) { reversed = false; }
 			disableShake(); //תאפיר את כל השייקים
 			self.shake2.gotoAndStop(1); //תציג רק את שייק 2 בצבעוני
 			self.shake6.gotoAndStop(1); //תציג רק את שייק 6 בצבעוני
+		
+			if (hamutz == true || minus200cal == true) {
+				self.shake2.gotoAndStop(1);
+				self.shake6.gotoAndStop(1);
+			}
 		}
 		
 		//פונקציה למעבר עכבר פטל שחור
@@ -2143,8 +2150,17 @@ if (reversed == null) { reversed = false; }
 			disableFruits(); //תאפיר את כולם
 			self.blackberry.gotoAndPlay(3); //תציג רק את התפוח מפריים 3
 			disableShake(); //תאפיר את כל השייקים
-			self.shake1.gotoAndStop(1); //תציג רק את שייק 1 בצבעוני
-			self.shake5.gotoAndStop(1); //תציג רק את שייק 5 בצבעוני
+		
+			if ((matok == true && plus200cal == true) || (matok == false && plus200cal == true)) {
+				self.shake1.gotoAndStop(1);
+				self.shake5.gotoAndStop(2);
+			} else if ((matok == false && minus200cal == true) || (matok == true && minus200cal == true)) {
+				self.shake1.gotoAndStop(2);
+				self.shake5.gotoAndStop(1);
+			} else {
+				self.shake1.gotoAndStop(1); //תציג רק את שייק 1 בצבעוני
+				self.shake5.gotoAndStop(1); //תציג רק את שייק 5 בצבעוני
+			}
 		}
 		
 		//פונקציה למעבר עכבר בננה
@@ -2155,6 +2171,10 @@ if (reversed == null) { reversed = false; }
 			self.shake1.gotoAndStop(1); //תציג רק את שייק 1 בצבעוני
 			self.shake3.gotoAndStop(1); //תציג רק את שייק 3 בצבעוני
 			self.shake4.gotoAndStop(1); //תציג רק את שייק 4 בצבעוני
+		
+			if (matok == true) {
+				self.shake5.gotoAndStop(2);
+			}
 		}
 		
 		//פונקציה למעבר עכבר אוכמניות
@@ -2162,8 +2182,17 @@ if (reversed == null) { reversed = false; }
 			disableFruits(); //תאפיר את כולם
 			self.blueberry.gotoAndPlay(3); //תציג רק את התפוח מפריים 3
 			disableShake(); //תאפיר את כל השייקים
-			self.shake1.gotoAndStop(1); //תציג רק את שייק 1 בצבעוני
-			self.shake5.gotoAndStop(1); //תציג רק את שייק 5 בצבעוני
+		
+			if ((matok == true && plus200cal == true) || (matok == false && plus200cal == true)) {
+				self.shake1.gotoAndStop(1);
+				self.shake5.gotoAndStop(2);
+			} else if ((matok == false && minus200cal == true) || (matok == true && minus200cal == true)) {
+				self.shake1.gotoAndStop(2);
+				self.shake5.gotoAndStop(1);
+			} else {
+				self.shake1.gotoAndStop(1); //תציג רק את שייק 1 בצבעוני
+				self.shake5.gotoAndStop(1); //תציג רק את שייק 5 בצבעוני
+			}
 		}
 		
 		//פונקציה למעבר עכבר ציה
@@ -2204,23 +2233,18 @@ if (reversed == null) { reversed = false; }
 			self.melon.gotoAndPlay(3); //תציג רק את התפוח מפריים 3
 			disableShake(); //תאפיר את כל השייקים
 		
-			if (matok == true) {
-				self.shake2.gotoAndStop(2); //אם מתוק דלוק, מלון לא ישפיע על שייק 2
-			} else {
-				self.shake2.gotoAndStop(1); //תציג רק את שייק 2 בצבעוני
+			self.shake2.gotoAndStop(1); //תציג רק את שייק 4 בצבעוני
+			self.shake4.gotoAndStop(1); //תציג רק את שייק 4 בצבעוני
+		
+			if (matok == true || plus200cal == true) {
+				self.shake4.gotoAndStop(1); //אם מתוק דלוק, מלון לא ישפיע על שייק 2
+				self.shake2.gotoAndStop(2);
 			}
 		
-			if (hamutz == true) {
-				self.shake4.gotoAndStop(2); //אם מתוק דלוק, מלון לא ישפיע על שייק 2
-			} else {
-				self.shake4.gotoAndStop(1); //תציג רק את שייק 2 בצבעוני
+			if (hamutz == true || minus200cal == true) {
+				self.shake2.gotoAndStop(1); //אם מתוק דלוק, מלון לא ישפיע על שייק 2
+				self.shake4.gotoAndStop(2);
 			}
-		
-			if (matok == false && hamutz == false) {
-				self.shake4.gotoAndStop(1); //תציג רק את שייק 4 בצבעוני
-			}
-		
-		
 		}
 		
 		//פונקציה למעבר עכבר נענע
@@ -2237,20 +2261,13 @@ if (reversed == null) { reversed = false; }
 			self.pineapple.gotoAndPlay(3); //תציג רק את התפוח מפריים 3
 			disableShake(); //תאפיר את כל השייקים
 		
-			if (matok == true) {
-				self.shake6.gotoAndStop(2);
-			} else {
+			if (matok == true || plus200cal == true) {
+				self.shake3.gotoAndStop(1);
+			} else if (hamutz == true || minus200cal == true) {
 				self.shake6.gotoAndStop(1);
-			}
-		
-			if (hamutz == true) {
-				self.shake3.gotoAndStop(2);
 			} else {
 				self.shake3.gotoAndStop(1);
-			}
-		
-			if (matok == false && hamutz == false) {
-				self.shake3.gotoAndStop(1); //תציג רק את שייק 3 בצבעוני	
+				self.shake6.gotoAndStop(1);
 			}
 		}
 		
@@ -2259,8 +2276,17 @@ if (reversed == null) { reversed = false; }
 			disableFruits(); //תאפיר את כולם
 			self.raspberry.gotoAndPlay(3); //תציג רק את התפוח מפריים 3
 			disableShake(); //תאפיר את כל השייקים
-			self.shake1.gotoAndStop(1); //תציג רק את שייק 1 בצבעוני
-			self.shake5.gotoAndStop(1); //תציג רק את שייק 5 בצבעוני
+		
+			if ((matok == true && plus200cal == true) || (matok == false && plus200cal == true)) {
+				self.shake1.gotoAndStop(1);
+				self.shake5.gotoAndStop(2);
+			} else if ((matok == false && minus200cal == true) || (matok == true && minus200cal == true)) {
+				self.shake1.gotoAndStop(2);
+				self.shake5.gotoAndStop(1);
+			} else {
+				self.shake1.gotoAndStop(1); //תציג רק את שייק 1 בצבעוני
+				self.shake5.gotoAndStop(1); //תציג רק את שייק 5 בצבעוני
+			}
 		}
 		
 		//פונקציה למעבר עכבר על שייק 1
@@ -2277,12 +2303,14 @@ if (reversed == null) { reversed = false; }
 		//פונקציה ליציאת עכבר משייק 1
 		function shake1Out() {
 			self.shake1.gotoAndStop(0);
-			enableFruits();
 		
-			if (matok == false) {
-				enableShake(); //תדליק את כולם
-			} else {
+			if (matok == true) {
 				matokOn();
+			} else if (plus200cal == true) {
+				plus200calOn();
+			} else {
+				enableShake();
+				enableFruits();
 			}
 		}
 		
@@ -2299,12 +2327,14 @@ if (reversed == null) { reversed = false; }
 		//פונקציה ליציאת עכבר משייק 2
 		function shake2Out() {
 			self.shake2.gotoAndStop(0);
-			enableFruits();
 		
-			if (hamutz == false) {
-				enableShake(); //תדליק את כולם
-			} else {
+			if (hamutz == true) {
 				hamutzOn();
+			} else if (minus200cal == true) {
+				minus200calOn();
+			} else {
+				enableShake();
+				enableFruits();
 			}
 		}
 		
@@ -2321,12 +2351,14 @@ if (reversed == null) { reversed = false; }
 		//פונקציה ליציאת עכבר משייק 3
 		function shake3Out() {
 			self.shake3.gotoAndStop(0);
-			enableFruits();
 		
-			if (matok == false) {
-				enableShake(); //תדליק את כולם
-			} else {
+			if (matok == true) {
 				matokOn();
+			} else if (plus200cal == true) {
+				plus200calOn();
+			} else {
+				enableShake();
+				enableFruits();
 			}
 		}
 		
@@ -2343,12 +2375,14 @@ if (reversed == null) { reversed = false; }
 		//פונקציה ליציאת עכבר משייק 4
 		function shake4Out() {
 			self.shake4.gotoAndStop(0);
-			enableFruits();
 		
-			if (matok == false) {
-				enableShake(); //תדליק את כולם
-			} else {
+			if (matok == true) {
 				matokOn();
+			} else if (plus200cal == true) {
+				plus200calOn();
+			} else {
+				enableShake();
+				enableFruits();
 			}
 		}
 		
@@ -2365,12 +2399,14 @@ if (reversed == null) { reversed = false; }
 		//פונקציה ליציאת עכבר משייק 5
 		function shake5Out() {
 			self.shake5.gotoAndStop(0);
-			enableFruits();
 		
-			if (matok == false) {
-				enableShake(); //תדליק את כולם
-			} else {
+			if (matok == true) {
 				matokOn();
+			} else if (minus200cal == true) {
+				minus200calOn();
+			} else {
+				enableShake();
+				enableFruits();
 			}
 		}
 		
@@ -2388,12 +2424,14 @@ if (reversed == null) { reversed = false; }
 		//פונקציה ליציאת עכבר משייק 6
 		function shake6Out() {
 			self.shake6.gotoAndStop(0);
-			enableFruits();
 		
-			if (hamutz == false) {
-				enableShake(); //תדליק את כולם
-			} else {
+			if (hamutz == true) {
 				hamutzOn();
+			} else if (minus200cal == true) {
+				minus200calOn();
+			} else {
+				enableShake();
+				enableFruits();
 			}
 		}
 		
@@ -2466,9 +2504,16 @@ if (reversed == null) { reversed = false; }
 				matokOn();
 			} else {
 				matok = false;
-				isHamutzEnabled();
-				self.matokBtn.gotoAndStop(0);
-				enableShake();
+		
+				if (plus200cal == true) {
+					plus200calOn();
+				} else if (minus200cal == true) {
+					minus200calOn();
+				} else {
+					isHamutzEnabled();
+					self.matokBtn.gotoAndStop(0);
+					enableShake();
+				}
 			}
 		}
 		
@@ -2480,6 +2525,8 @@ if (reversed == null) { reversed = false; }
 		
 				if (plus200cal == true) {
 					plus200calOn();
+				} else if (minus200cal == true) {
+					minus200calOn();
 				} else {
 					isMatokEnabled();
 					self.hamutzBtn.gotoAndStop(0);
@@ -2497,10 +2544,13 @@ if (reversed == null) { reversed = false; }
 		
 				if (hamutz == true) {
 					hamutzOn();
+				} else if (matok == true) {
+					matokOn();
 				} else {
 					isMinus200calEnabled();
 					self.plus200calBtn.gotoAndStop(0);
 					enableFruits();
+					enableMouse();
 					enableShake();
 				}
 			}
@@ -2511,9 +2561,18 @@ if (reversed == null) { reversed = false; }
 				minus200calOn();
 			} else {
 				minus200cal = false;
-				isPlus200calEnabled();
-				self.minus200calBtn.gotoAndStop(0);
-				enableShake();
+		
+				if (hamutz == true) {
+					hamutzOn();
+				} else if (matok == true) {
+					matokOn();
+				} else {
+					isMinus200calDisabled();
+					self.minus200calBtn.gotoAndStop(0);
+					enableShake();
+					enableFruits();
+					enableMouse();
+				}
 			}
 		}
 		
@@ -2523,27 +2582,50 @@ if (reversed == null) { reversed = false; }
 			self.hamutzBtn.gotoAndStop(0);
 			self.matokBtn.gotoAndStop(2);
 			disableShake();
-			self.shake1.gotoAndStop(1);
-			self.shake3.gotoAndStop(1);
-			self.shake4.gotoAndStop(1);
-			self.shake5.gotoAndStop(1);
 		
-			// if matok is true this fruits doesnt works
-			isHamutzDisabled();
+			if (minus200cal == true) {
+				minus200Matok();
+				self.shake5.gotoAndStop(1);
+				self.shake1.gotoAndStop(2);
+				self.shake3.gotoAndStop(2);
+				self.shake4.gotoAndStop(2);
+			} else {
 		
-			isMatokEnabled();
+				if (plus200cal == true) {
+					self.shake5.gotoAndStop(2);
+				} else {
+					self.shake5.gotoAndStop(1);
+				}
+		
+				self.shake1.gotoAndStop(1);
+				self.shake3.gotoAndStop(1);
+				self.shake4.gotoAndStop(1);
+		
+				// if matok is true this fruits doesnt works
+				isHamutzDisabled();
+		
+				isMatokEnabled();
+			}
 		}
 		
 		function hamutzOn() {
 			hamutz = true;
 			matok = false;
+			self.matokBtn.gotoAndStop(0);
+			self.hamutzBtn.gotoAndStop(2);
+			disableShake();
 		
 			if (plus200cal == true) {
 				more200Hamutz();
+			} else if (minus200cal == true) {
+				self.shake2.gotoAndStop(1);
+				self.shake6.gotoAndStop(1);
+		
+				//
+				isMatokDisabled();
+		
+				isHamutzEnabled();
 			} else {
-				self.matokBtn.gotoAndStop(0);
-				self.hamutzBtn.gotoAndStop(2);
-				disableShake();
 				self.shake2.gotoAndStop(1);
 				self.shake6.gotoAndStop(1);
 		
@@ -2557,13 +2639,13 @@ if (reversed == null) { reversed = false; }
 		function plus200calOn() {
 			plus200cal = true;
 			minus200cal = false;
+			self.minus200calBtn.gotoAndStop(0);
+			self.plus200calBtn.gotoAndStop(2);
+			disableShake();
 		
 			if (hamutz == true) {
 				more200Hamutz();
 			} else {
-				self.minus200calBtn.gotoAndStop(0);
-				self.plus200calBtn.gotoAndStop(2);
-				disableShake();
 				self.shake1.gotoAndStop(1);
 				self.shake3.gotoAndStop(1);
 				self.shake4.gotoAndStop(1);
@@ -2581,38 +2663,84 @@ if (reversed == null) { reversed = false; }
 			self.minus200calBtn.gotoAndStop(2);
 			self.plus200calBtn.gotoAndStop(0);
 			disableShake();
-			self.shake2.gotoAndStop(1);
-			self.shake5.gotoAndStop(1);
-			self.shake6.gotoAndStop(1);
 		
-			// if minus200cal is true this shakes and fruits doesnt works
-			isPlus200calDisabled();
+			if (matok == true) {
+				minus200Matok();
+			} else if (hamutz == true) {
+				minus200Hamutz();
+			} else{
+				self.shake2.gotoAndStop(1);
+				self.shake5.gotoAndStop(1);
+				self.shake6.gotoAndStop(1);
 		
-			isMinus200calEnabled();
+				// if minus200cal is true this shakes and fruits doesnt works
+				isPlus200calDisabled();
+		
+				isMinus200calEnabled();
+			}
 		}
 		
 		function isPlus200calEnabled() {
 			self.shake1.mouseEnabled = true;
 			self.shake3.mouseEnabled = true;
 			self.shake4.mouseEnabled = true;
+		
+			//
+			enableFruits();
+			self.kiwi.gotoAndStop(1);
+			self.apple.gotoAndStop(1);
+			self.cucumber.gotoAndStop(1);
+			self.mint.gotoAndStop(1);
+			self.kiwi.mouseEnabled = false;
+			self.apple.mouseEnabled = false;
+			self.cucumber.mouseEnabled = false;
+			self.mint.mouseEnabled = false;
+		
 		}
 		
 		function isPlus200calDisabled() {
 			self.shake1.mouseEnabled = false;
 			self.shake3.mouseEnabled = false;
 			self.shake4.mouseEnabled = false;
+		
+			//
+			self.kiwi.gotoAndStop(0);
+			self.apple.gotoAndStop(0);
+			self.cucumber.gotoAndStop(0);
+			self.mint.gotoAndStop(0);
+			self.kiwi.mouseEnabled = true;
+			self.apple.mouseEnabled = true;
+			self.cucumber.mouseEnabled = true;
+			self.mint.mouseEnabled = true;
 		}
 		
 		function isMinus200calEnabled() {
 			self.shake2.mouseEnabled = true;
 			self.shake5.mouseEnabled = true;
 			self.shake6.mouseEnabled = true;
+		
+			//
+			enableFruits();
+			self.mango.gotoAndStop(1);
+			self.banana.gotoAndStop(1);
+			self.chia.gotoAndStop(1);
+			self.chia.mouseEnabled = false;
+			self.mango.mouseEnabled = false;
+			self.banana.mouseEnabled = false;
 		}
 		
 		function isMinus200calDisabled() {
 			self.shake2.mouseEnabled = false;
 			self.shake5.mouseEnabled = false;
 			self.shake6.mouseEnabled = false;
+		
+			//
+			self.mango.gotoAndStop(0);
+			self.banana.gotoAndStop(0);
+			self.chia.gotoAndStop(0);
+			self.chia.mouseEnabled = true;
+			self.mango.mouseEnabled = true;
+			self.banana.mouseEnabled = true;
 		}
 		
 		function isHamutzEnabled() {
@@ -2664,6 +2792,8 @@ if (reversed == null) { reversed = false; }
 			self.raspberry.mouseEnabled = true;
 			self.blueberry.mouseEnabled = true;
 			self.mango.mouseEnabled = true;
+			self.melon.mouseEnabled = true;
+			self.pineapple.mouseEnabled = true;
 		
 			self.banana.gotoAndStop(0);
 			self.chia.gotoAndStop(0);
@@ -2671,6 +2801,8 @@ if (reversed == null) { reversed = false; }
 			self.raspberry.gotoAndStop(0);
 			self.blueberry.gotoAndStop(0);
 			self.mango.gotoAndStop(0);
+			self.melon.gotoAndStop(0);
+			self.pineapple.gotoAndStop(0);
 		}
 		
 		function isMatokDisabled() {
@@ -2684,6 +2816,8 @@ if (reversed == null) { reversed = false; }
 			self.raspberry.mouseEnabled = false;
 			self.blueberry.mouseEnabled = false;
 			self.mango.mouseEnabled = false;
+			self.melon.mouseEnabled = false;
+			self.pineapple.mouseEnabled = false;
 		
 			self.banana.gotoAndStop(1);
 			self.chia.gotoAndStop(1);
@@ -2691,6 +2825,8 @@ if (reversed == null) { reversed = false; }
 			self.raspberry.gotoAndStop(1);
 			self.blueberry.gotoAndStop(1);
 			self.mango.gotoAndStop(1);
+			self.melon.gotoAndStop(1);
+			self.pineapple.gotoAndStop(1);
 		}
 		
 		
@@ -2698,7 +2834,38 @@ if (reversed == null) { reversed = false; }
 		
 		function more200Hamutz() {
 			disableFruits();
+			disabledMouse();
 			disableShake();
+			self.matokBtn.gotoAndStop(0);
+		}
+		
+		function minus200Matok() {
+			disableFruits();
+			disableShake();
+			disabledMouse();
+		
+			self.shake5.gotoAndStop(1);
+			self.shake5.mouseEnabled = true;
+			self.blackberry.mouseEnabled = true;
+			self.raspberry.mouseEnabled = true;
+			self.blueberry.mouseEnabled = true;
+			self.blackberry.gotoAndStop(0);
+			self.raspberry.gotoAndStop(0);
+			self.blueberry.gotoAndStop(0);
+		}
+		
+		function minus200Hamutz() {	
+			self.shake2.gotoAndStop(1);
+			self.shake6.gotoAndStop(1);
+		
+			self.shake5.gotoAndStop(2);
+			self.shake5.mouseEnabled = false;
+			self.blackberry.mouseEnabled = false;
+			self.raspberry.mouseEnabled = false;
+			self.blueberry.mouseEnabled = false;
+			self.blackberry.gotoAndStop(1);
+			self.raspberry.gotoAndStop(1);
+			self.blueberry.gotoAndStop(1);
 		}
 	}
 
@@ -2858,20 +3025,20 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images/shake_atlas_1.png?1602280535464", id:"shake_atlas_1"},
-		{src:"images/shake_atlas_2.png?1602280535464", id:"shake_atlas_2"},
-		{src:"images/shake_atlas_3.png?1602280535464", id:"shake_atlas_3"},
-		{src:"images/shake_atlas_4.png?1602280535464", id:"shake_atlas_4"},
-		{src:"images/shake_atlas_5.png?1602280535464", id:"shake_atlas_5"},
-		{src:"images/shake_atlas_6.png?1602280535465", id:"shake_atlas_6"},
-		{src:"images/shake_atlas_7.png?1602280535465", id:"shake_atlas_7"},
-		{src:"images/shake_atlas_8.png?1602280535465", id:"shake_atlas_8"},
-		{src:"images/shake_atlas_9.png?1602280535465", id:"shake_atlas_9"},
-		{src:"images/shake_atlas_10.png?1602280535465", id:"shake_atlas_10"},
-		{src:"images/shake_atlas_11.png?1602280535465", id:"shake_atlas_11"},
-		{src:"images/shake_atlas_12.png?1602280535465", id:"shake_atlas_12"},
-		{src:"images/shake_atlas_13.png?1602280535465", id:"shake_atlas_13"},
-		{src:"images/shake_atlas_14.png?1602280535466", id:"shake_atlas_14"}
+		{src:"images/shake_atlas_1.png?1602324119243", id:"shake_atlas_1"},
+		{src:"images/shake_atlas_2.png?1602324119243", id:"shake_atlas_2"},
+		{src:"images/shake_atlas_3.png?1602324119243", id:"shake_atlas_3"},
+		{src:"images/shake_atlas_4.png?1602324119243", id:"shake_atlas_4"},
+		{src:"images/shake_atlas_5.png?1602324119243", id:"shake_atlas_5"},
+		{src:"images/shake_atlas_6.png?1602324119243", id:"shake_atlas_6"},
+		{src:"images/shake_atlas_7.png?1602324119243", id:"shake_atlas_7"},
+		{src:"images/shake_atlas_8.png?1602324119243", id:"shake_atlas_8"},
+		{src:"images/shake_atlas_9.png?1602324119243", id:"shake_atlas_9"},
+		{src:"images/shake_atlas_10.png?1602324119244", id:"shake_atlas_10"},
+		{src:"images/shake_atlas_11.png?1602324119244", id:"shake_atlas_11"},
+		{src:"images/shake_atlas_12.png?1602324119244", id:"shake_atlas_12"},
+		{src:"images/shake_atlas_13.png?1602324119244", id:"shake_atlas_13"},
+		{src:"images/shake_atlas_14.png?1602324119244", id:"shake_atlas_14"}
 	],
 	preloads: []
 };
