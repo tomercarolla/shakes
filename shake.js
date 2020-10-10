@@ -8,8 +8,8 @@ var loadedGoogleCount = 0;
 var gFontsUpdateCacheList = [];
 var tFontsUpdateCacheList = [];
 lib.ssMetadata = [
-		{name:"shake_atlas_1", frames: [[0,0,1364,1364]]},
-		{name:"shake_atlas_2", frames: [[0,0,1364,1364]]},
+		{name:"shake_atlas_1", frames: [[0,0,400,400],[0,402,400,400],[0,804,400,400],[0,1206,400,400],[0,1608,400,400],[402,0,400,400],[402,402,400,400],[402,804,400,400],[402,1206,400,400],[402,1608,400,400],[804,0,400,400],[804,402,400,400],[804,804,400,400],[804,1206,400,400],[804,1608,400,400],[1206,0,400,400],[1206,402,400,400]]},
+		{name:"shake_atlas_2", frames: [[0,0,823,1175],[825,0,400,400],[1227,0,400,400],[1629,0,400,400],[825,402,400,400],[1227,402,400,400],[1629,402,400,400],[825,804,400,400],[1227,804,400,400],[1629,804,400,400],[0,1177,400,400],[402,1177,400,400],[804,1206,400,400],[1206,1206,400,400],[1608,1206,400,400],[0,1579,400,400],[402,1579,400,400],[804,1608,400,400],[1206,1608,400,400],[1608,1608,400,400]]},
 		{name:"shake_atlas_3", frames: [[0,0,1364,1364]]},
 		{name:"shake_atlas_4", frames: [[0,0,1364,1364]]},
 		{name:"shake_atlas_5", frames: [[0,0,1364,1364]]},
@@ -20,8 +20,8 @@ lib.ssMetadata = [
 		{name:"shake_atlas_10", frames: [[0,0,1364,1364]]},
 		{name:"shake_atlas_11", frames: [[0,0,1364,1364]]},
 		{name:"shake_atlas_12", frames: [[0,0,1364,1364]]},
-		{name:"shake_atlas_13", frames: [[0,0,823,1175],[825,0,400,400],[1227,0,400,400],[1629,0,400,400],[825,402,400,400],[1227,402,400,400],[1629,402,400,400],[825,804,400,400],[1227,804,400,400],[1629,804,400,400],[0,1177,400,400],[402,1177,400,400],[804,1206,400,400],[1206,1206,400,400],[1608,1206,400,400],[0,1579,400,400],[402,1579,400,400],[804,1608,400,400],[1206,1608,400,400],[1608,1608,400,400]]},
-		{name:"shake_atlas_14", frames: [[0,0,400,400],[0,402,400,400],[0,804,400,400],[0,1206,400,400],[0,1608,400,400],[402,0,400,400],[402,402,400,400],[402,804,400,400],[402,1206,400,400],[402,1608,400,400],[804,0,400,400],[804,402,400,400],[804,804,400,400],[804,1206,400,400],[804,1608,400,400],[1206,0,400,400],[1206,402,400,400]]}
+		{name:"shake_atlas_13", frames: [[0,0,1364,1364]]},
+		{name:"shake_atlas_14", frames: [[0,0,1364,1364]]}
 ];
 
 
@@ -101,343 +101,343 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 
 
 (lib.CachedBmp_1 = function() {
-	this.initialize(ss["shake_atlas_13"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._1raspberryblurberry = function() {
-	this.initialize(ss["shake_atlas_1"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._1raspberryblurberry_gray = function() {
 	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
+(lib._1raspberryblurberry = function() {
+	this.initialize(ss["shake_atlas_14"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._1raspberryblurberry_gray = function() {
+	this.initialize(ss["shake_atlas_13"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
 (lib._2pineapleapplecucumberkiwimint = function() {
-	this.initialize(ss["shake_atlas_3"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._2pineapleapplecucumberkiwimint_gray = function() {
-	this.initialize(ss["shake_atlas_4"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._3melonapplemint = function() {
-	this.initialize(ss["shake_atlas_5"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._3melonapplemint_gray = function() {
-	this.initialize(ss["shake_atlas_6"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._4bananapineaplechia = function() {
-	this.initialize(ss["shake_atlas_7"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._4bananapineaplechia_gray = function() {
-	this.initialize(ss["shake_atlas_8"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._5bananamelonmango = function() {
-	this.initialize(ss["shake_atlas_9"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._5bananamelonmango_gray = function() {
-	this.initialize(ss["shake_atlas_10"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._6bananaberrys = function() {
-	this.initialize(ss["shake_atlas_11"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib._6bananaberrys_gray = function() {
 	this.initialize(ss["shake_atlas_12"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
+(lib._2pineapleapplecucumberkiwimint_gray = function() {
+	this.initialize(ss["shake_atlas_11"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._3melonapplemint = function() {
+	this.initialize(ss["shake_atlas_10"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._3melonapplemint_gray = function() {
+	this.initialize(ss["shake_atlas_9"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._4bananapineaplechia = function() {
+	this.initialize(ss["shake_atlas_8"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._4bananapineaplechia_gray = function() {
+	this.initialize(ss["shake_atlas_7"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._5bananamelonmango = function() {
+	this.initialize(ss["shake_atlas_6"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._5bananamelonmango_gray = function() {
+	this.initialize(ss["shake_atlas_5"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._6bananaberrys = function() {
+	this.initialize(ss["shake_atlas_4"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib._6bananaberrys_gray = function() {
+	this.initialize(ss["shake_atlas_3"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
 (lib.appledisabled = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.applehover = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.applenormal = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.bananadisabled = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.bananahover = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.banananormal = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.burrydisabled = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.burryhover = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.burrynormal = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.chiadisabled = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.chiahover = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.chianormal = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.cucumberdisabled = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(13);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.cucumberhover = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.cucumbernormal = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kiwidisabled = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kiwihover = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.kiwinormal = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(18);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.mangodisabled = function() {
-	this.initialize(ss["shake_atlas_13"]);
+	this.initialize(ss["shake_atlas_2"]);
 	this.gotoAndStop(19);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.mangohover = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.mangonormal = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.melondisabled = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.melonhover = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.melonnormal = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.mintdisabled = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.minthover = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.mintnormal = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.petelblackdisabled = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.petelblackhover = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.petelblacknormal = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.peteldisabled = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.petelhover = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.petelnormal = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(13);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.pineappledisabled = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.pineapplehover = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.pineapplenormal = function() {
-	this.initialize(ss["shake_atlas_14"]);
+	this.initialize(ss["shake_atlas_1"]);
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -2857,12 +2857,20 @@ if (reversed == null) { reversed = false; }
 		function minus200Hamutz() {	
 			self.shake2.gotoAndStop(1);
 			self.shake6.gotoAndStop(1);
+			
+			enableFruits();
 		
 			self.shake5.gotoAndStop(2);
 			self.shake5.mouseEnabled = false;
+			self.chia.mouseEnabled = false;
+			self.mango.mouseEnabled = false;
+			self.banana.mouseEnabled = false;
 			self.blackberry.mouseEnabled = false;
 			self.raspberry.mouseEnabled = false;
 			self.blueberry.mouseEnabled = false;
+			self.chia.gotoAndStop(1);
+			self.mango.gotoAndStop(1);
+			self.banana.gotoAndStop(1);
 			self.blackberry.gotoAndStop(1);
 			self.raspberry.gotoAndStop(1);
 			self.blueberry.gotoAndStop(1);
@@ -3025,20 +3033,20 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images/shake_atlas_1.png?1602324119243", id:"shake_atlas_1"},
-		{src:"images/shake_atlas_2.png?1602324119243", id:"shake_atlas_2"},
-		{src:"images/shake_atlas_3.png?1602324119243", id:"shake_atlas_3"},
-		{src:"images/shake_atlas_4.png?1602324119243", id:"shake_atlas_4"},
-		{src:"images/shake_atlas_5.png?1602324119243", id:"shake_atlas_5"},
-		{src:"images/shake_atlas_6.png?1602324119243", id:"shake_atlas_6"},
-		{src:"images/shake_atlas_7.png?1602324119243", id:"shake_atlas_7"},
-		{src:"images/shake_atlas_8.png?1602324119243", id:"shake_atlas_8"},
-		{src:"images/shake_atlas_9.png?1602324119243", id:"shake_atlas_9"},
-		{src:"images/shake_atlas_10.png?1602324119244", id:"shake_atlas_10"},
-		{src:"images/shake_atlas_11.png?1602324119244", id:"shake_atlas_11"},
-		{src:"images/shake_atlas_12.png?1602324119244", id:"shake_atlas_12"},
-		{src:"images/shake_atlas_13.png?1602324119244", id:"shake_atlas_13"},
-		{src:"images/shake_atlas_14.png?1602324119244", id:"shake_atlas_14"}
+		{src:"images/shake_atlas_1.png?1602324519867", id:"shake_atlas_1"},
+		{src:"images/shake_atlas_2.png?1602324519867", id:"shake_atlas_2"},
+		{src:"images/shake_atlas_3.png?1602324519867", id:"shake_atlas_3"},
+		{src:"images/shake_atlas_4.png?1602324519867", id:"shake_atlas_4"},
+		{src:"images/shake_atlas_5.png?1602324519867", id:"shake_atlas_5"},
+		{src:"images/shake_atlas_6.png?1602324519867", id:"shake_atlas_6"},
+		{src:"images/shake_atlas_7.png?1602324519867", id:"shake_atlas_7"},
+		{src:"images/shake_atlas_8.png?1602324519867", id:"shake_atlas_8"},
+		{src:"images/shake_atlas_9.png?1602324519868", id:"shake_atlas_9"},
+		{src:"images/shake_atlas_10.png?1602324519868", id:"shake_atlas_10"},
+		{src:"images/shake_atlas_11.png?1602324519868", id:"shake_atlas_11"},
+		{src:"images/shake_atlas_12.png?1602324519868", id:"shake_atlas_12"},
+		{src:"images/shake_atlas_13.png?1602324519868", id:"shake_atlas_13"},
+		{src:"images/shake_atlas_14.png?1602324519868", id:"shake_atlas_14"}
 	],
 	preloads: []
 };
